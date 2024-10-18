@@ -1,0 +1,964 @@
+@font-face{
+    font-family: neue;
+    src: url(font/NeueHaasDisplayMediu.woff2);
+}
+@font-face{
+    font-family: neue;
+    font-weight: bolder;
+    src: url(font/NeueHaasDisplayLight.woff2);
+}
+@font-face{
+    font-family: neue;
+    font-weight: 200;
+    src: url(font/NeueHaasDisplayRoman.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    z-index: 10;
+    position: relative;
+}
+#page1{
+    width: 100%;
+    min-height: 210vh;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+/*...............nav bar and logo code.................*/
+nav{
+    padding: 2vw 0vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+
+}
+nav img {
+    height: 70px;
+    width: 100px;
+    transition: all ease 0.2s;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+nav h3{
+    display: none;
+}
+nav h2{
+    display: none;
+}
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    border-radius: 50px;
+    font-size: 20px;
+    transition: all ease 0.5s;
+    position: relative;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.833);
+    overflow: hidden;
+}
+#nav-part2 h4 a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.651);
+    z-index: 9;
+    position: relative;
+}
+#nav-part2 h4:hover a{
+    color: white;
+}
+#nav-part2 h4::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: all ease 0.5s;
+    border-radius: 50%;
+    bottom:-100%;
+}
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+/*........mbl view  menu code............*/
+#full-scr {
+    height: 100vh;
+    width: 100%;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.5s;
+}
+#full-div1{
+     height: 50%;
+     width: 100%;
+     background-color: #EFEAE3; 
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+/*............page1 paragraph and h1 code................*/
+}
+#center{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.368);
+    padding-bottom: 2.5vw;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+#center h1{
+    font-size: 10vw;
+    font-weight: bolder;
+    line-height: 8vw;
+    font-family: neue;
+    text-align: right;
+    padding-bottom: 1.5w;
+}
+/* .......code for video........*/
+#page1 video{
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+    margin-top: 4vw;
+}
+
+/*...........yellow shape code  in page 1..............*/
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 70vh;
+}
+#hero-1{
+    background-color: #FF330A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius:50%;
+    filter: blur(10px);
+    position: absolute;
+}
+#hero-2{
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+#hero-3{
+    background: linear -gradient(#FE320A, #fe3f0a) ;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+@keyframes anime1{
+    from{
+        transform: translate(55%,-3%);
+    }
+    to{
+        transform: translate(0%,10%);
+    } 
+}
+@keyframes anime2{
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,30%);
+    } 
+}
+
+/* ..............page2............ */
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    padding: 5vw 0;
+    position: relative;
+}
+/*..............moving text code.. in page 2...........*/
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-text h1{
+    font-size: 8vw;
+    display: inline-block;
+    font-weight: bolder;
+}
+#gola {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-color: #FE320A;
+    border-radius: 50%;
+    margin: 1vw 1vw;
+}
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+    
+}
+/* ..........page 2 bottom text pic and yellow shape code */
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 4.5vw;
+    justify-content: space-between;
+    z-index: 9;
+}
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 53%;
+    font-weight: bolder;
+    line-height: 4vw;
+}
+#bottom-part2{
+    width: 24%;
+}
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+#bottom-part2 p{
+    font-weight: 200;
+    margin-top: 2vw;
+}
+/* ....page 2 yellow shape code */
+#page2 #gooey {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 58%;
+    left: 20%;
+    background:linear-gradient(to top right,#FE320A , #ff671b);
+    filter: blur(25px);
+    animation-name: gooey;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes gooey{
+    from{
+        filter: blur(25px);
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+    
+}
+
+/*........ page 3 .........*/
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+/*.............feature project code in page 3 top ..........*/
+#self{
+    position: relative;
+    padding-bottom: 4vw;
+    align-items: center;
+    display: flex;
+    gap: 0.5vw;
+    margin-left: 2vw;
+}
+#page3  #self #gol{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #FE320A;
+}
+#page3  #self h5{
+    font-size: 1.5vw;
+    font-weight: 200;
+}
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+/*............overlay and pics code in page 3........ */
+.elem{
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #00000033;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #F1A61A;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.1s;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+#fixed-image{
+    height: 22vw;
+    width: 18vw;
+    border-radius: 10px;
+    z-index: 99;
+    position: fixed;
+    background-color: #FE320A;
+    left: 50%;
+    display: none;
+    top: 30%;
+    background-size: cover;
+    background-position: center;
+}
+/*...........all project little text code...........*/
+#self2{
+    padding-top: 3vw;
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-left: 2vw;
+}
+#page3  #self2 h4{
+    font-size: 2vw;
+    font-weight: 100;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.422);
+    padding: 1vw 1vw;
+    gap: 2vw;
+}
+#self2 h4:hover{
+    background-color: black;
+    color: white;
+    transition: all ease o.4s;
+}
+/*........... page 4 code pic with content............. */
+#page4{
+    height: 80vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 1vw 2vw;
+}
+#self3{
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.804);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+#page4-left{
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.804);
+} 
+#page4-left h2{
+    color: white;
+    font-size: 40px;
+    margin-left: 10vw;
+    margin-top: 8vw;
+}
+ #page4-left h2 span{
+    color: gray;
+    font-size: 40px;
+} 
+#page4-left p{
+    color: white;
+    margin-top: 2vw;
+    margin-left:5vw;
+    font-size: 20px;
+    font-weight: 200;
+}
+#self3 #page4-right{
+    width: 60%;
+    height: 100vh; 
+}
+#page4-right img{
+    height: 100vh;
+    width: 100%; 
+}
+/* ..............swiper page code ................*/
+#page5{
+    height: 70vh;
+    width: 100%;
+    padding: 10vw 2vw;
+    background-color: #EFEAE3;
+} 
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+.swiper-slide {
+    width: 30%;
+    padding: 0 2vw;
+    border-left: 1px solid rgba(0, 0, 0, 0.178);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+.swiper-slide:nth-child(2n) {
+    width: 30%;
+  }
+
+.swiper-slide:nth-child(3n) {
+    width: 20%;
+  }
+/* ...........last black page code............ */
+#page6{
+    height: 100vh; 
+    width: 100%; 
+} 
+#footer{
+    position: fixed;
+    height: 105vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1vw 3vw;
+}
+#footer h1{
+    font-size: 24vw;
+}
+#footer-div{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#footer-div h2{
+    margin-left: 5vw;
+}
+#footer-div-right{
+    margin-right:3vw ;
+    border-bottom: 1px solid white;
+}
+#footer-div-right p{
+    padding-bottom: 1vw;
+    font-family: neue;
+    font-size: 20px;
+}
+#footer-div-right h3{
+    margin-bottom: 0.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+#footer-bottom{
+    height: 6vw;
+    width: 100%;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer-bottom h4{
+    padding: 2vw 1vw;
+}
+/* .........last page orange shape code............. */
+#heri-shape{
+    position: absolute;
+    width: 100vw;
+    height: 15vw;
+    right: 10vw;
+    left: 15%;
+    bottom: 10vh;
+}
+#heri-3{
+    background: linear-gradient(#FE320A, #fe3f0a) ;
+    height: 30vw;
+    width: 40vw;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(25px);
+    animation-name: anime6;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+} 
+@keyframes anime6{
+    from{
+        transform: translate(25%,-3%) skew(0);
+    }
+    to{
+        transform: translate(0%,5%) skew(20deg);
+    } 
+}
+/* ..........loader code..........*/
+#loader{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,orange, orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+
+    opacity: 0;
+    font-weight: bold;
+    animation-name: loader;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes loader{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/*...........responsive code.............. */
+@media (max-width:600px) {
+    #page1{
+        width: 100vw;
+        min-height: 100vh;
+        padding: 0 0vw;  
+    } 
+    nav{ 
+        padding: 7vw 5vw;
+        background-color: #EFEAE3; 
+    }
+    nav img {
+        transition: all ease 0.2s;
+        height:9vh;
+    }
+    #nav-part2{
+        display: none ;
+    }
+    nav h3{
+        display: block;
+        padding: 3vw 5vw;
+        border: 1px solid #ababab;
+        border-radius: 50px;
+        font-size: 4vw;
+        font-weight: 200;
+        padding-left: 8vw;
+    }
+    
+    #center{
+        height: 62vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.368);
+        padding-bottom: 10vw;
+        flex-direction: column-reverse;
+        padding: 7vw 5vw;
+        position: relative;
+        z-index: 9;
+    }
+    #left h3{
+        width: 80%;
+        font-size: 5.5vw;
+        line-height: 6vw;
+    }
+    #center h1{
+        font-size: 17vw;
+        line-height: 15vw;
+        text-align: right;
+    }
+    #page1 video{
+        width: 92%;
+        position: relative;
+        border-radius: 15px;
+        height: 70vh;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 4vw;
+        margin-left: 4%;
+    }
+    #page2{
+        width: 100%;
+        min-height: 120vh;
+        background-color: #EFEAE3;
+        padding: 8vw 0;
+        position: relative;
+    }
+    #moving-text {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    #moving-text::-webkit-scrollbar{
+        display: none;
+    }
+    .con{
+        white-space: nowrap;
+        display: inline-block;
+        animation-name: move;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    #moving-text h1{
+        font-size: 15vw;
+        display: inline-block;
+        font-weight: bolder;
+    }
+    #gola {
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        background-color: #FE320A;
+        border-radius: 50%;
+        margin: 2vw 1vw;
+    }
+    #page2-bottom{
+        height: 85 vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        padding: 10vw 4vw;
+        justify-content: space -between;
+        z-index: 9;
+        flex-direction: column;
+    }
+    #page2-bottom h1{
+        font-size: 8vw;
+        width: 100%;
+        font-weight: bolder;
+        line-height: 9vw;
+    }
+    #bottom-part2{
+        width: 70%;
+        padding-top: 10vw;
+    }
+    #bottom-part2 img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    #bottom-part2 p{
+        font-size: 3.5vw;
+        font-weight: 200;
+        margin-top: 2vw;
+    }
+    #page2 #gooey {
+        height: 62vw;
+        width: 62vw;
+        border-radius: 50%;
+        position: absolute;
+        top: 58%;
+        left: 20%;
+        background:linear-gradient(to top right,#FE320A , #ff671b);
+        filter: blur(25px);
+        animation-name: gooey;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+    }
+    #page3{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        padding: 8vw 0;
+    }
+    #self{
+        position: relative;
+        padding-bottom: 3vw;
+        align-items: center;
+        display: flex;
+        gap: 0.5vw;
+        margin-left: 2.5vw;
+    }
+    #page3  #self #gol{
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #FE320A;
+    }
+    #page3  #self h5{
+        font-size: 3vw;
+        font-weight: 200;
+    }
+    .elem{
+        height: 120px;
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid #00000033;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 2vw;
+    }
+    .elem h2{
+        font-size: 4vw;
+        position: relative;
+        z-index: 9;
+    }
+    .elem .overlay{
+        height: 100%;
+        width: 100%;
+        background-color: #F1A61A;
+        position: absolute;
+        left: 0;
+        top: -100%;
+        transition: all ease 0.1s;
+    }
+    .elem:hover .overlay{
+        top: 0;
+    }
+    #fixed-image{
+        height: 22vw;
+        width: 15vw;
+        border-radius: 10px;
+        z-index: 99;
+        position: fixed;
+        background-color: #FE320A;
+        left: 40%;
+        display: none;
+        top: 30%;
+        background-size: cover;
+        background-position: center;
+    }
+    #self2{
+        padding-top: 7vw;
+        display: flex;
+        margin-left: 3vw;
+    }
+    #page3  #self2 h4{
+        font-size: 4vw;
+        font-weight: 100;
+        border-radius: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.422);
+        padding: 2vw 2vw;
+    }
+    #self2 h4:hover{
+        background-color: black;
+        color: white;
+        transition: all ease o.4s;
+    }
+    #page4{
+        height: 60vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        position: relative;
+        padding: vw 2vw;
+    }
+    #self3{
+        width: 100%;
+        height: 60vh;
+        background-color: rgba(0, 0, 0, 0.804);
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+    }
+    #page4-left{
+        width: 50%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.804);
+    } 
+    #page4-left h2{
+        color: white;
+        font-size: 35px;
+        margin-left: 4vw;
+        margin-top: 8vw;
+    }
+     #page4-left h2 span{
+        color: gray;
+        font-size: 40px;
+    } 
+    #page4-left p{
+        color: white;
+        margin-top: 2.5vw;
+        margin-left:5vw;
+        font-size: 16px;
+        font-weight: 200;
+        font-family: neue;
+    }
+    #self3 #page4-right{
+        width: 60%;
+        height: 100vh; 
+    }
+    #page4-right img{
+        height: 100vh;
+        width: 100%; 
+        object-fit: cover;
+        object-position:left;
+    }
+    #page5{
+        height: 30vh;
+        width: 100%;
+        padding:5vw 5vw;
+        background-color: #EFEAE3;
+        font-family: neue;
+        font-weight: 300;
+    } 
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+    .swiper-slide {
+        width: 100%;
+        border-left: 1px solid rgba(0, 0, 0, 0.178);
+       padding-top: 2vw;
+       padding-bottom: 2vw;
+       border-bottom: 1px solid rgba(0, 0, 0, 0.457);
+      } 
+      .swiper-slide p{
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+      }
+    .swiper-slide:nth-child(2n) {
+        width: 90%;
+      }
+    .swiper-slide:nth-child(3n) {
+        width: 90%;
+      }
+      #loader h1{
+        font-weight: bold;
+        font-size: 7vw;
+      }
+      #page6{
+        height: 60vh; 
+        width: 100%; 
+    } 
+    #footer{
+        position: fixed;
+        height: 90vh;
+        width: 100%;
+        background-color: black;
+        color: white;
+        z-index: 9;
+        bottom: 0;
+        flex-direction: column;
+        padding: 1vw 2vw;
+    }
+    #footer h1{
+        font-size: 22vw;
+    }
+    #footer-div{
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #footer-div h2{
+        margin-left: 0.5vw
+    }
+    #footer-div-right{
+        margin-right:0vw ;
+        border-bottom: 1px solid white;
+    }
+    #footer-div-right p{
+        padding-bottom: 2vw;
+        font-family: neue;
+        font-size: 18px;
+    }
+    #footer-div-right h3{
+        margin-bottom: 0.5vw;
+    }
+    #footer-bottom{
+        height: 18vw;
+        width: 100%;
+        border-top: 1px solid white;
+    }
+}
+
+
